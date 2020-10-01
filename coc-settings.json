@@ -151,7 +151,6 @@
 	"javascript.suggest.names": true,
 	"javascript.suggestionActions.enabled": true,
 	"json.format.enable": true,
-	"eslint.autoFixOnSave": false,
 	"prettier.printWidth": 100,
 	"prettier.eslintIntegration": true,
 	"prettier.disableLanguages": [],
@@ -213,6 +212,27 @@
 					"directory": "/tmp/ccls"
 				}
 			}
+		},
+		"rust": {
+			"command":"rust-analyzer",
+			"filetypes": ["rust"],
+			"rootPatterns": ["Cargo.toml"]
+		},
+		"julia":{
+			"command": "julia",
+			"args":["--startup-file=no","--history-file=no","-e",
+			"using LanguageServer;\n using Pkg;\n import StaticLint;\n import SymbolServer;\n"],
+			"filetypes": ["julia"]
+		},
+		"latex":{
+			"command": "texlab",
+			"ignoredRootPaths": ["~"],
+			"filetypes": ["tex","bib","plaintex","context"]
+		},
+		"efm":{
+			"command":"efm-languageserver",
+			"args": [],
+			"filetypes": ["eruby","markdown"]
 		}
 	}
 }
