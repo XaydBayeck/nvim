@@ -1,0 +1,27 @@
+#######################################################################
+#                            Rust Snippets                            #
+#######################################################################
+
+snippet st "struct name { ... }" b
+struct ${1:Name} {
+	${2:body}
+};
+endsnippet
+
+snippet ps "pub struct name { ... }" b
+pub struct ${1:Name} {
+	${2:body}
+};
+endsnippet
+
+snippet ipl "impl struct" b
+impl${1:<T>} ${2:struct} {
+	$3
+}
+endsnippet
+
+snippet iplt "impl Trait for struct" b
+impl${1:<T>} ${2:Trait} for ${3:struct} {
+	$4
+}
+endsnippet

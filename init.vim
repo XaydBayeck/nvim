@@ -132,7 +132,7 @@ noremap ; :
 " Save & quit
 noremap Q :q<CR>
 noremap <C-q> :qa<CR>
-noremap S :w<CR>
+noremap <LEADER>fs :w<CR>
 
 " Open the vimrc file anytime
 noremap <LEADER>rc :e ~/.config/nvim/init.vim<CR>
@@ -333,7 +333,7 @@ noremap \s :%s//g<left><left>
 " set wrap
 noremap <LEADER>sw :set wrap<CR>
 
-" when press esc,clear hlsearch
+" when press esc, clear hlsearch
 noremap <Esc> <Esc>:nohlsearch<CR>
 
 " press f10 to show hlgroup
@@ -653,6 +653,8 @@ let g:coc_global_extensions = [
 			\ 'coc-vimlsp',
 			\ 'coc-vetur',
 			\ 'coc-yaml',
+			\ 'coc-rust-analyzer',
+			\ 'coc-julia',
 			\ 'coc-yank']
 inoremap <silent><expr> <TAB>
 			\ pumvisible() ? "\<C-n>" :
@@ -891,7 +893,7 @@ let g:VM_maps["Redo"]               = '<C-r>'
 " ===
 " === Far.vim
 " ===
-noremap <LEADER>f :F  **/*<left><left><left><left><left>
+noremap <LEADER>fa :F  **/*<left><left><left><left><left>
 let g:far#mapping = {
 			\ "replace_undo" : ["l"],
 			\ }
@@ -1325,7 +1327,7 @@ noremap <c-y> :NR<CR>
 " ===
 " === any-jump
 " ===
-nnoremap aj :AnyJump<CR>
+nnoremap <LEADER>aj :AnyJump<CR>
 let g:any_jump_window_width_ratio  = 0.8
 let g:any_jump_window_height_ratio = 0.9
 
