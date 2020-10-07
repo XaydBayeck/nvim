@@ -194,9 +194,9 @@ noremap <silent> K 5k
 noremap <silent> J 5j
 
 " H key: go to the start of the line
-noremap <silent> H 0
+noremap <silent> <M-h> ^
 " L key: go to the end of the line
-noremap <silent> L $
+noremap <silent> <M-l> $
 
 " Faster in-line navigation
 noremap W 5w
@@ -448,7 +448,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'cohama/agit.vim'
 
 " Autoformat
-Plug 'Chiel92/vim-autoformat'
+"Plug 'Chiel92/vim-autoformat'
 
 " Tex
 " Plug 'lervag/vimtex'
@@ -721,7 +721,12 @@ let g:coc_snippet_prev = '<c-p>'
 imap <C-e> <Plug>(coc-snippets-expand-jump)
 let g:snips_author = 'David Chen'
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
-
+" coc-format-selected
+vmap <LEADER>ff <Plug>(coc-format-selected)
+nmap <LEADER>ff <Plug>(coc-format-selected)
+" CocAction
+nmap <LEADER>ca :CocAction<CR>
+vmap <LEADER>ca :CocAction<CR>
 
 " ===
 " === vim-instant-markdown
@@ -751,6 +756,7 @@ set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
 set rtp+=/home/david/.linuxbrew/opt/fzf
 " noremap <silent> <C-p> :Files<CR>
 noremap <silent> <C-p> :Leaderf file<CR>
+noremap <silent> <LEADER>fl :<C-U>LeaderfFile<CR>
 noremap <silent> <C-f> :Rg<CR>
 noremap <silent> <C-h> :History<CR>
 "noremap <C-t> :BTags<CR>
@@ -1038,10 +1044,11 @@ let g:go_doc_keywordprg_enabled = 0
 " ===
 " === AutoFormat
 " ===
-nnoremap \f :Autoformat<CR>
-let g:formatdef_custom_js = '"js-beautify -t"'
-let g:formatters_javascript = ['custom_js']
-au BufWrite *.js :Autoformat
+"nnoremap \f :Autoformat<CR>
+"let g:formatdef_custom_js = '"js-beautify -t"'
+"let g:formatters_javascript = ['custom_js']
+"au BufWrite *.js :Autoformat
+autocmd FileType typescriptreact nnoremap <buffer> \f :CocCommand prettier.formatFile<CR>
 
 
 " ===

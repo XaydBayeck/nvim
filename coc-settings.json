@@ -65,7 +65,15 @@
 		"$HOME/.config/nvim/Ultisnips/",
 		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
 	],
-	"coc.preferences.formatOnSaveFiletypes": ["typescript", "html", "css", "json", "python", "vue"],
+	"coc.preferences.formatOnSaveFiletypes": [
+		"markdown",
+		"typescript",
+		"html",
+		"css",
+		"json",
+		"python",
+		"vue"
+	],
 	"yaml.format.enable": true,
 	"signature.target": "float",
 	"yank.enableCompletion": false,
@@ -214,25 +222,29 @@
 			}
 		},
 		"rust": {
-			"command":"rust-analyzer",
+			"command": "rust-analyzer",
 			"filetypes": ["rust"],
 			"rootPatterns": ["Cargo.toml"]
 		},
-		"julia":{
+		"julia": {
 			"command": "julia",
-			"args":["--startup-file=no","--history-file=no","-e",
-			"using LanguageServer;\n using Pkg;\n import StaticLint;\n import SymbolServer;\n"],
+			"args": [
+				"--startup-file=no",
+				"--history-file=no",
+				"-e",
+				"using LanguageServer;\n using Pkg;\n import StaticLint;\n import SymbolServer;\n"
+			],
 			"filetypes": ["julia"]
 		},
-		"latex":{
+		"latex": {
 			"command": "texlab",
 			"ignoredRootPaths": ["~"],
-			"filetypes": ["tex","bib","plaintex","context"]
+			"filetypes": ["tex", "bib", "plaintex", "context"]
 		},
-		"efm":{
-			"command":"efm-languageserver",
+		"efm": {
+			"command": "efm-languageserver",
 			"args": [],
-			"filetypes": ["eruby","markdown"]
+			"filetypes": ["eruby", "markdown"]
 		}
 	}
 }
