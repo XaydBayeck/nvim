@@ -564,6 +564,8 @@ Plug 'lambdalisue/suda.vim' " do stuff like :sudowrite
 Plug 'vim-crystal/vim-crystal'
 Plug 'ron-rs/ron.vim'
 
+Plug 'JuliaEditorSupport/julia-vim'
+
 call plug#end()
 set re=0
 
@@ -1349,6 +1351,12 @@ let g:typescript_ignore_browserwords = 1
 " ===
 nnoremap <LEADER>gl :Agit<CR>
 let g:agit_no_default_mappings = 1
+
+" ===
+" === julia-vim
+" ===
+let g:latex_to_unicode_tab=0
+inoremap <M-Tab> <C-X><C-O>
 
 " ===================== End of Plugin Settings =====================
 

@@ -221,28 +221,13 @@
 				}
 			}
 		},
-		"rust": {
-			"command": "rust-analyzer",
-			"filetypes": ["rust"],
-			"rootPatterns": ["Cargo.toml"]
-		},
-		"julia": {
-			"command": "julia",
-			"args": [
-				"--startup-file=no",
-				"--history-file=no",
-				"-e",
-				"using LanguageServer;\n using Pkg;\n import StaticLint;\n import SymbolServer;\n"
-			],
-			"filetypes": ["julia"]
-		},
 		"latex": {
 			"command": "texlab",
 			"ignoredRootPaths": ["~"],
 			"filetypes": ["tex", "bib", "plaintex", "context"]
 		},
 		"efm": {
-			"command": "efm-languageserver",
+			"command": "efm-langserver",
 			"args": [],
 			"filetypes": ["eruby", "markdown"]
 		}
