@@ -566,6 +566,9 @@ Plug 'ron-rs/ron.vim'
 
 Plug 'JuliaEditorSupport/julia-vim'
 
+" Add syntax for TOML
+Plug 'cespare/vim-toml'
+
 call plug#end()
 set re=0
 
